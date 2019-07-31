@@ -23,7 +23,7 @@ node {
  
  withSonarQubeEnv(credentialsId: 'sonarqubeid') {
     withMaven(jdk: 'JDK', maven: 'maven') {
-    sh 'mvn clean compile sonar:sonar -Dsonar.projectKey=maven-project -Dsonar.organization=creativetech123 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=e130fab062012d5160ab51a8ee03561c457e0268' 
+    sh 'mvn sonar:sonar' 
  }
 }
  

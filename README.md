@@ -1,3 +1,7 @@
+# Maven-example
+[![Build Status](http://ec2-54-86-47-115.compute-1.amazonaws.com:8080/job/maven-example-jacoco.svg?branch=master)](http://ec2-54-86-47-115.compute-1.amazonaws.com:8080/job/maven-example-jacoco)
+
+
 # Maven – JaCoCo code coverage example
 Maven, JUnit 5 + JaCoCo example.
 

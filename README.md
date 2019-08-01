@@ -1,5 +1,5 @@
 # Maven-example
-[![Build Status](http://ec2-52-201-233-60.compute-1.amazonaws.com:8080/buildStatus/icon?job=maven-example-jacoco)](http://ec2-52-201-233-60.compute-1.amazonaws.com:8080/job/maven-example-jacoco/)
+[![Build Status](http://ec2-54-173-110-36.compute-1.amazonaws.com:8080/buildStatus/icon?job=maven-example-jacoco)](http://ec2-54-173-110-36.compute-1.amazonaws.com:8080/job/maven-example-jacoco/)
 
 
 # Maven – JaCoCo code coverage example

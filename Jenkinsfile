@@ -9,22 +9,22 @@ node {
    stage('Build') {
        withMaven(jdk: 'JDK', maven: 'maven') {
     sh 'mvn clean compile'
-}
+        }
      
       
-   }
+  }
    
    stage('unit test') {
        withMaven(jdk: 'JDK', maven: 'maven') {
     sh 'mvn test' 
-}
+     }
       
-   }
+ }
  
  withSonarQubeEnv(credentialsId: 'sonarqubeid') {
     withMaven(jdk: 'JDK', maven: 'maven') {
     sh 'mvn sonar:sonar' 
- }
+      }
  
 }
  
@@ -41,9 +41,9 @@ stage("Quality Gate"){
    stage('package') {
        withMaven(jdk: 'JDK', maven: 'maven') {
     sh 'mvn package'
-}
+     }
       
-   }
+}
    
    stage('deploy to dev') {
       

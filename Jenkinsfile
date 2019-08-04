@@ -12,21 +12,21 @@ node {
         }
      
       
-  }
+   }
    
    stage('unit test') {
        withMaven(jdk: 'JDK', maven: 'maven') {
     sh 'mvn test' 
-     }
+       }
       
- }
+   }
  
  withSonarQubeEnv(credentialsId: 'sonarqubeid') {
     withMaven(jdk: 'JDK', maven: 'maven') {
     sh 'mvn sonar:sonar' 
-      }
+       }
  
-}
+   }
  
 stage("Quality Gate"){
           timeout(time: 1, unit: 'HOURS') {
@@ -35,7 +35,7 @@ stage("Quality Gate"){
                   error "Pipeline aborted due to quality gate failure: ${qg.status}"
               }
           }
- }
+   }
  
  
    stage('package') {
@@ -43,7 +43,7 @@ stage("Quality Gate"){
     sh 'mvn package'
      }
       
-}
+   }
    
    stage('deploy to dev') {
       

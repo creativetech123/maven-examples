@@ -20,13 +20,14 @@ node {
 }
       
    }
- stage('sonarqube'){
+ 
  withSonarQubeEnv(credentialsId: 'sonarqubeid') {
     withMaven(jdk: 'JDK', maven: 'maven') {
     sh 'mvn sonar:sonar' 
  }
- }
+ 
 }
+ 
 stage("Quality Gate"){
           timeout(time: 1, unit: 'HOURS') {
               def qg = waitForQualityGate()

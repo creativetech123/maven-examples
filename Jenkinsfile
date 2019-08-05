@@ -20,13 +20,13 @@ node {
        }
       
    }
- 
+  stage('sonarqube analysis'){
  withSonarQubeEnv(credentialsId: 'sonarqubeid') {
     withMaven(jdk: 'JDK', maven: 'maven') {
     sh 'mvn sonar:sonar' 
        }
- 
    }
+ } 
  
 stage("Quality Gate"){
           timeout(time: 1, unit: 'HOURS') {
